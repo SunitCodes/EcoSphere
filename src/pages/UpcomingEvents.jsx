@@ -2,7 +2,9 @@ import React from 'react'
 
 const UpcomingEvents = () => {
   return (
-    <div>UpcomingEvents</div>
+   
+      <div>Upcoming Events</div>
+
   )
 }
 

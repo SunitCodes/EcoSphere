@@ -34,7 +34,7 @@ const Navbar = () => {
 
       {/* Right side - credits and user button */}
       <div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           <div className=' bg-green-50 px-3 py-1.5 rounded-full text-amber-700 mr-4'>
             <Link to="/games" className='flex gap-2'>
               <LeafyGreen size={24} className='text-green-800'/>

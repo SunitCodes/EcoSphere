@@ -5,17 +5,20 @@ import Courses from "./pages/Courses";
 import Games from "./pages/Games";
 import Quiz from "./pages/Quiz";
 import UpcomingEvents from "./pages/UpcomingEvents";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
   
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} /> 
-        <Route path="/courses" element={<Courses />} /> 
-        <Route path="/games" element={<Games />} /> 
-        <Route path="/quiz" element={<Quiz />} /> 
-        <Route path="/upcoming-events" element={<UpcomingEvents />} /> 
+        <Route path="/" element={<DashboardLayout />}>
+          <Route path="dashboard" element={<Dashboard />} /> 
+          <Route path="courses" element={<Courses />} /> 
+          <Route path="games" element={<Games />} /> 
+          <Route path="quiz" element={<Quiz />} /> 
+          <Route path="upcoming-events" element={<UpcomingEvents />} /> 
+        </Route>
       </Routes>
     </BrowserRouter>
   )
