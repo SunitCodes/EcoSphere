@@ -1,10 +1,11 @@
 import React from 'react'
+import GameCard from '../components/GameCard'
 
 const Games = () => {
   return (
-    
-      <div>Games</div>
-   
+    <div>
+      <GameCard/>
+    </div>   
   )
 }
 

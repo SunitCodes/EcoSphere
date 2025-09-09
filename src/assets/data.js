@@ -1,4 +1,7 @@
 import { BookOpenText, CalendarDays, Gamepad2Icon, LayoutDashboard, MessageCircleQuestion } from "lucide-react";
+import wastesort from './images/wastesort.png'
+import saveforest from './images/saveforest.png'
+import cleanocean from './images/cleanocean.png'
 
 export const SIDE_MENU_DATA = [
   {
@@ -32,3 +35,38 @@ export const SIDE_MENU_DATA = [
     path: "/upcoming-events",
   },
 ];
+
+export const GAME_DATA = [
+  {
+    id: "01",
+    label: "Waste Sorter",
+    img: wastesort
+  },
+  {
+    id: "02",
+    label: "Clean the Ocean",
+    img: cleanocean
+  },
+  {
+    id: "03",
+    label: "Save the Forest",
+    img: saveforest
+  }
+]
+
+
+// Function returning dummy events data
+export const getUpcomingEvents = () => ({
+  school: [
+    { id: 1, title: "School Tree Plantation", date: "2025-09-15" },
+    { id: 2, title: "Eco Art Competition", date: "2025-09-20" },
+  ],
+  localCommunity: [
+    { id: 1, title: "Community Clean-up Drive", date: "2025-09-18" },
+    { id: 2, title: "Recycling Workshop", date: "2025-09-22" },
+  ],
+  global: [
+    { id: 1, title: "World Cleanup Day", date: "2025-09-21" },
+    { id: 2, title: "International Climate Conference", date: "2025-09-25" },
+  ],
+});

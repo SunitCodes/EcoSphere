@@ -20,7 +20,7 @@ const Sidebar = () => {
           >
             
             {isActive && (
-              <span className="absolute left-0 top-0 h-full w-[4px] bg-green-700 rounded-r-md"></span>
+              <span className="absolute left-0 top-1/2 -translate-y-1/2 h-8 w-[4px] bg-green-700 rounded-r-md"></span>
             )}
 
             
