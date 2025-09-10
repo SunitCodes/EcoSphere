@@ -1,4 +1,4 @@
-import { BookOpenText, CalendarDays, Gamepad2Icon, LayoutDashboard, MessageCircleQuestion } from "lucide-react";
+import { UserIcon, BookOpenText, CalendarDays, Gamepad2Icon, LayoutDashboard, MessageCircleQuestion } from "lucide-react";
 import wastesort from './images/wastesort.png'
 import saveforest from './images/saveforest.png'
 import cleanocean from './images/cleanocean.png'
@@ -40,6 +40,12 @@ export const SIDE_MENU_DATA = [
     icon: CalendarDays,
     path: "/upcoming-events",
   },
+  {
+    id: "06",
+    label: "Profile",
+    icon: UserIcon,
+    path: "/profile",
+  }
 ];
 
 export const GAME_DATA = [

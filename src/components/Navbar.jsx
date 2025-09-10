@@ -23,7 +23,7 @@ const Navbar = () => {
           )}
         </button>
         <div className="flex items-center gap-2">
-          <Sprout size={30} className='text-green-600'/>
+          <Sprout size={36} className='text-green-600'/>
           <span className="text-xl font-semibold text-black truncate">
             EcoSphere
           </span>
@@ -35,10 +35,10 @@ const Navbar = () => {
       {/* Right side - credits and user button */}
       <div>
         <div className="flex items-center gap-3">
-          <div className=' bg-green-50 px-3 py-1.5 rounded-full text-amber-700 mr-4'>
+          <div className=' bg-green-50 px-3 py-1.5 rounded-full text-green-700 mr-4'>
             <Link to="/games" className='flex gap-2'>
-              <LeafyGreen size={24} className='text-green-800'/>
-              <span className='text-sm font-bold pt-0.5'>25 Points</span>
+              <LeafyGreen size={24} className='text-green-700'/>
+              <span className='text-sm font-bold pt-0.5'>267 Eco Points</span>
             </Link>
           </div>
           <div className="relative">

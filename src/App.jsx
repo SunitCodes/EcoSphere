@@ -6,6 +6,7 @@ import Games from "./pages/Games";
 import Quiz from "./pages/Quiz";
 import UpcomingEvents from "./pages/UpcomingEvents";
 import DashboardLayout from "./layouts/DashboardLayout";
+import Profile from "./pages/Profile";
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
           <Route path="games" element={<Games />} /> 
           <Route path="quiz" element={<Quiz />} /> 
           <Route path="upcoming-events" element={<UpcomingEvents />} /> 
+          <Route path="profile" element={<Profile/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
