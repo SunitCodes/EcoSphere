@@ -47,12 +47,12 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mt-8">
+    <div className="bg-gray-50 rounded-xl p-6 mt-8">
       {/* Header */}
       <div className="flex justify-between items-center mb-4 p-4 px-6">
         <div>
           <h2 className="text-xl font-bold text-gray-800">Achievement Showcase</h2>
-          <p className="text-sm text-gray-500">18 badges earned • 4 showing</p>
+          <p className="text-sm text-gray-500">4 badges earned • 18 available</p>
         </div>
         
       </div>

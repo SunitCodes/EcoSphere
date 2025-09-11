@@ -3,7 +3,7 @@ import { CalendarDays, Target, Users } from "lucide-react";
 
 const ProfileFooter = () => {
   return (
-    <div className="w-full bg-gray-50 py-8 border border-gray-200 mt-8 rounded-xl mb-8">
+    <div className="w-full bg-gray-50 py-8 mt-8 rounded-xl mb-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
         
         {/* Learning Streak */}
@@ -26,7 +26,7 @@ const ProfileFooter = () => {
         <div className="bg-white rounded-2xl shadow p-6 text-center">
           <Users className="w-8 h-8 text-green-600 mx-auto mb-3" />
           <h3 className="text-lg font-semibold">School Ranking</h3>
-          <p className="text-3xl font-bold text-green-700 mt-2">#7</p>
+          <p className="text-3xl font-bold text-green-700 mt-2">#89</p>
           <p className="text-gray-500 text-sm mt-1">Out of 156 students</p>
         </div>
 

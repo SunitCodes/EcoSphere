@@ -17,7 +17,7 @@ import {
 
 const ProfileHeader = () => {
   return (
-    <div className="bg-gray-50 rounded-2xl p-6 mt-8 border border-gray-200">
+    <div className="bg-gray-50 rounded-2xl p-6 mt-8">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
         {/* Left: Avatar + Info */}
@@ -58,7 +58,7 @@ const ProfileHeader = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <Coins size={24} className="text-green-600" />
-            <span className="text-3xl font-semibold text-green-600">2,847</span>
+            <span className="text-3xl font-semibold text-green-600">267</span>
           </div>
           <p className="text-sm font-semibold text-gray-400 pt-2">Total Eco Points</p>
         </div>
@@ -66,7 +66,7 @@ const ProfileHeader = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <Trees size={24} className="text-green-600" />
-            <span className="text-3xl font-semibold text-green-600">12</span>
+            <span className="text-3xl font-semibold text-green-600">6</span>
           </div>
           <p className="text-sm font-semibold text-gray-400 pt-2">Trees Planted Equivalent</p>
         </div>
@@ -74,7 +74,7 @@ const ProfileHeader = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <Leaf size={24} className="text-green-600" />
-            <span className="text-3xl font-semibold text-green-600">45.7kg</span>
+            <span className="text-3xl font-semibold text-green-600">15.7kg</span>
           </div>
           <p className="text-sm font-semibold text-gray-400 pt-2">CO₂ Reduction</p>
         </div>
@@ -92,11 +92,11 @@ const ProfileHeader = () => {
         </div>
         <div className="flex items-center gap-2">
           <Award size={18} className="text-yellow-500" />
-          <span>18 badges earned</span>
+          <span>4 badges earned</span>
         </div>
         <div className="flex items-center gap-2">
           <TrendingUp size={18} className="text-green-600" />
-          <span>Level 8</span>
+          <span>Level 2</span>
         </div>
       </div>
     </div>
