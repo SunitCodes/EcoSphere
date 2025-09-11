@@ -48,7 +48,6 @@ const Navbar = () => {
             <span className="font-medium text-gray-900">Joseph John</span>
             <span className="text-xs text-gray-500">Student</span>
           </div>
-          <ChevronDown className="w-4 h-4 text-gray-600" />
         </div>
       </div>
 

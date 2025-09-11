@@ -30,18 +30,12 @@ export const SIDE_MENU_DATA = [
   },
   {
     id: "04",
-    label: "Quiz",
-    icon: MessageCircleQuestion,
-    path: "/quiz",
-  },
-  {
-    id: "05",
     label: "Upcoming Events",
     icon: CalendarDays,
     path: "/upcoming-events",
   },
   {
-    id: "06",
+    id: "05",
     label: "Profile",
     icon: UserIcon,
     path: "/profile",

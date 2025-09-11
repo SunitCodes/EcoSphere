@@ -37,7 +37,7 @@ const ProfileHeader = () => {
               <GraduationCap size={14} />
               <span>Green Valley High School</span>
               <span>•</span>
-              <span>Grade 10</span>
+              <span>Grade 5</span>
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-md pt-2">
               <MapPin size={14} />

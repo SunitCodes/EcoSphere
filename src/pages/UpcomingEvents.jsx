@@ -17,7 +17,7 @@ const challenges = [
     title: "Daily Energy Saver",
     description:
       "Reduce your household energy consumption by 20% today",
-    participants: 89,
+    participants: 100,
     timeLeft: "18 hours left",
     reward: 50,
     status: "full",
@@ -38,7 +38,7 @@ const challenges = [
     description:
       "Join the global tree planting initiative for Earth Day",
     participants: 1247,
-    timeLeft: "Starting in 5 days",
+    timeLeft: " 5 days left",
     reward: 300,
     status: "register",
   },
