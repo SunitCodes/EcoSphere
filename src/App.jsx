@@ -6,6 +6,7 @@ import Games from "./pages/Games";
 import UpcomingEvents from "./pages/UpcomingEvents";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Profile from "./pages/Profile";
+import TrashSortingGame from "./components/GameComponent/TrashSortingGame";
 
 function App() {
   
@@ -15,7 +16,9 @@ function App() {
         <Route path="/" element={<DashboardLayout />}>
           <Route path="dashboard" element={<Dashboard />} /> 
           <Route path="courses" element={<Courses />} /> 
-          <Route path="games" element={<Games />} /> 
+          <Route path="games" element={<Games />}>
+            <Route path="trash-sorting" element={<TrashSortingGame/>} />
+          </Route> 
           <Route path="upcoming-events" element={<UpcomingEvents />} /> 
           <Route path="profile" element={<Profile/>}/>
         </Route>
