@@ -1,42 +1,32 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { UserIcon, BookOpenText, CalendarDays, Gamepad2Icon, LayoutDashboard, MessageCircleQuestion } from "lucide-react";
+import { UserIcon, BookOpenText, CalendarDays, Gamepad2Icon, LayoutDashboard, MessageCircleQuestion, Trophy, Upload, ClipboardCheck } from "lucide-react";
+import { useAuth } from "../context/AuthContext";
 
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const SIDE_MENU_DATA = [
-    {
-      id: "01",
-      label: "Dashboard",
-      icon: LayoutDashboard,
-      path: "/dashboard",
-    },
-    {
-      id: "02",
-      label: "Courses",
-      icon: BookOpenText,
-      path: "/courses",
-    },
-    {
-      id: "03",
-      label: "Games",
-      icon: Gamepad2Icon,
-      path: "/games",
-    },
-    {
-      id: "04",
-      label: "Upcoming Events",
-      icon: CalendarDays,
-      path: "/upcoming-events",
-    },
-    {
-      id: "05",
-      label: "Profile",
-      icon: UserIcon,
-      path: "/profile",
-    }
+  const {userRole} = useAuth();
+
+  const STUDENT_MENU = [
+    { id: "01", label: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
+    { id: "02", label: "Courses", icon: BookOpenText, path: "/courses" },
+    { id: "03", label: "Games", icon: Gamepad2Icon, path: "/games" },
+    { id: "04", label: "Upcoming Events", icon: CalendarDays, path: "/upcoming-events" },
+    { id: "05", label: "Profile", icon: UserIcon, path: "/profile" },
   ];
+
+  // Teacher menu
+  const TEACHER_MENU = [
+    { id: "01", label: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
+    { id: "02", label: "Leaderboard", icon: Trophy, path: "/leaderboard" },
+    { id: "03", label: "Upload Task", icon: Upload, path: "/upload-task" },
+    { id: "04", label: "Review Task", icon: ClipboardCheck, path: "/review-task" },
+    { id: "05", label: "Profile", icon: UserIcon, path: "/profile" },
+  ];
+
+  const SIDE_MENU_DATA = userRole === "teacher" ? TEACHER_MENU : STUDENT_MENU;
+
 
   return (
     <div className="w-64 h-[calc(100vh-61px)] bg-white border-r border-gray-200/50 p-5 sticky top-[61px] z-20">
