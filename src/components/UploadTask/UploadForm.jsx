@@ -1,7 +1,10 @@
+import { FilePlus } from "lucide-react";
 import React, { useState } from "react";
 import { UserPlus, Send, ClipboardCheck } from "lucide-react";
+import { useTasks } from "../../context/TasksContext";
 
-const UploadForm = ({ onUpload }) => {
+const UploadForm = () => {
+  const { addTask } = useTasks();
   const [task, setTask] = useState({
     title: "",
     description: "",
@@ -23,18 +26,20 @@ const UploadForm = ({ onUpload }) => {
 
     const newTask = {
       ...task,
-      id: Date.now(), // unique ID
+      id: Date.now(),
       tags: task.tags.split(",").map((t) => t.trim()),
       requirements: task.requirements.split(",").map((r) => r.trim()),
       points: Number(task.points),
       participants: Number(task.participants),
       actionIcon:
-        task.action === "Join Task" ? <UserPlus size={14} /> :
-        task.action === "Submit Evidence" ? <Send size={14} /> :
-        <ClipboardCheck size={14} />,
+        task.action === "Join Task"
+          ? <UserPlus size={14} />
+          : task.action === "Submit Evidence"
+          ? <Send size={14} />
+          : <ClipboardCheck size={14} />,
     };
 
-    onUpload(newTask);
+    addTask(newTask);
 
     setTask({
       title: "",
@@ -48,27 +53,104 @@ const UploadForm = ({ onUpload }) => {
     });
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="p-6 bg-white rounded-lg shadow-md space-y-4">
-      <h2 className="text-lg font-semibold">Upload New Task</h2>
 
-      <input type="text" name="title" value={task.title} onChange={handleChange} placeholder="Title" required className="w-full border rounded p-2" />
-      <textarea name="description" value={task.description} onChange={handleChange} placeholder="Description" required className="w-full border rounded p-2" />
-      <input type="text" name="tags" value={task.tags} onChange={handleChange} placeholder="Tags (comma separated)" className="w-full border rounded p-2" />
-      <input type="text" name="requirements" value={task.requirements} onChange={handleChange} placeholder="Requirements (comma separated)" className="w-full border rounded p-2" />
-      <input type="number" name="points" value={task.points} onChange={handleChange} placeholder="Eco Points" required className="w-full border rounded p-2" />
-      <input type="number" name="participants" value={task.participants} onChange={handleChange} placeholder="Participants" required className="w-full border rounded p-2" />
-      <input type="date" name="deadline" value={task.deadline} onChange={handleChange} required className="w-full border rounded p-2" />
+return (
+  <form onSubmit={handleSubmit} className="p-8 bg-white rounded-2xl shadow-lg space-y-6 max-w-xl mx-auto">
+    <div className="flex items-center space-x-2">
+      <FilePlus className="w-6 h-6 text-green-600" />
+      <h2 className="text-xl font-bold text-gray-800">Upload New Task</h2>
+    </div>
 
-      <select name="action" value={task.action} onChange={handleChange} className="w-full border rounded p-2">
-        <option value="Join Task">Join Task</option>
-        <option value="Submit Evidence">Submit Evidence</option>
-        <option value="Completed">Completed</option>
-      </select>
+    <input
+      type="text"
+      name="title"
+      value={task.title}
+      onChange={handleChange}
+      placeholder="Task Title"
+      required
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+    />
 
-      <button type="submit" className="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-md">Upload Task</button>
-    </form>
-  );
+    <textarea
+      name="description"
+      value={task.description}
+      onChange={handleChange}
+      placeholder="Task Description"
+      required
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none resize-none h-24"
+    />
+
+    <input
+      type="text"
+      name="tags"
+      value={task.tags}
+      onChange={handleChange}
+      placeholder="Tags (comma separated)"
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+    />
+
+    <input
+      type="text"
+      name="requirements"
+      value={task.requirements}
+      onChange={handleChange}
+      placeholder="Requirements (comma separated)"
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+    />
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <input
+        type="number"
+        name="points"
+        value={task.points}
+        onChange={handleChange}
+        placeholder="Eco Points"
+        required
+        className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+      />
+
+      <input
+        type="number"
+        name="participants"
+        value={task.participants}
+        onChange={handleChange}
+        placeholder="Participants"
+        required
+        className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+      />
+    </div>
+
+    <input
+      type="text"
+      name="deadline"
+      value={task.deadline}
+      onChange={handleChange}
+      placeholder="Deadline"
+      required
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+    />
+
+    <select
+      name="action"
+      value={task.action}
+      onChange={handleChange}
+      className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-green-500 focus:outline-none"
+    >
+      <option value="Join Task">Join Task</option>
+      <option value="Submit Evidence">Submit Evidence</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <button
+      type="submit"
+      className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition duration-200"
+    >
+      <FilePlus className="w-5 h-5" />
+      Upload Task
+    </button>
+  </form>
+);
+
 };
 
 export default UploadForm;

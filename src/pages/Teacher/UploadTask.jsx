@@ -3,7 +3,7 @@ import UploadForm from '../../components/UploadTask/UploadForm'
 
 const UploadTask = () => {
   return (
-    <div>
+    <div className='p-8'>
       <UploadForm/>
     </div>
   )
