@@ -1,5 +1,6 @@
 import React from "react";
 import { BookOpen, Brain, CheckCircle, MousePointerClickIcon, PlayCircle, TimerIcon, Trophy } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Hardcoded lessons data function
 function getLessons() {
@@ -10,7 +11,7 @@ function getLessons() {
       description: "Understanding the fundamentals of climate change and its global impact",
       time: "15 min",
       points: 5,
-      status: "Completed",
+      status: "Start Lesson",
     },
     {
       level: "intermediate",
@@ -34,7 +35,7 @@ function getLessons() {
       description: "Modern farming techniques that protect the environment",
       time: "18 min",
       points: 15,
-      status: "Start Lesson",
+      status: "Completed",
     }
   ];
 }
@@ -62,7 +63,9 @@ function StatusButton({ status }) {
     );
   }
   return (
-    <button className="w-full flex items-center justify-center bg-green-600 text-white py-2 rounded-md hover:bg-green-700">
+    <button 
+      type="submit" 
+      className="w-full flex items-center justify-center bg-green-600 text-white py-2 rounded-md hover:bg-green-700">
       <PlayCircle className="w-5 h-5 mr-2" /> Start Lesson
     </button>
   );
@@ -71,6 +74,12 @@ function StatusButton({ status }) {
 // The main component
 export default function EnvironmentalLessons() {
   const lessons = getLessons();
+  const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/courses/climate-change-basics");
+  };
 
   return (
     <div className="py-8">
@@ -82,7 +91,9 @@ export default function EnvironmentalLessons() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {lessons.map((lesson, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow p-5 flex flex-col gap-3">
+            <form key={idx} 
+              onSubmit={handleSubmit}
+              className="bg-white rounded-xl shadow p-5 flex flex-col gap-3">
               <div className="flex items-start justify-between">
                 <div className={`px-2 py-1 text-xs rounded ${getLevelClass(lesson.level)}`}>
                   {lesson.level}
@@ -112,7 +123,7 @@ export default function EnvironmentalLessons() {
               </div>
 
               <StatusButton status={lesson.status} />
-            </div>
+            </form>
           ))}
         </div>
       </div>

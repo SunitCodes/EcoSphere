@@ -16,6 +16,7 @@ import TeacherDahboardLayout from "./layouts/TeacherDahboardLayout";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import RealTasks from "./pages/RealTasks";
 import { TasksProvider } from "./context/TasksContext";
+import LessonPage from "./components/Lessons/LessonPage";
 
 function AppRoutes() {
   const {userRole} = useAuth(); 
@@ -35,6 +36,7 @@ function AppRoutes() {
             <Route path="realtasks" element={<RealTasks />} />
             <Route path="upcoming-events" element={<UpcomingEvents />} />
             <Route path="profile" element={<Profile />} />
+            <Route path="courses/climate-change-basics" element={<LessonPage />} />
           </Route>
         )}
 
