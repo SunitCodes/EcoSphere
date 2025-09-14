@@ -4,7 +4,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   // Fetch from API/localStorage after login
-  const [userRole, setUserRole] = useState("teacher"); // or "teacher"
+  const [userRole, setUserRole] = useState("student"); // or "teacher"
 
   return (
     <AuthContext.Provider value={{ userRole, setUserRole }}>

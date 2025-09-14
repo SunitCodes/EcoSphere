@@ -14,6 +14,8 @@ import ReviewTask from "./pages/Teacher/ReviewTask";
 import TeacherProfile from "./pages/Teacher/TeacherProfile";
 import TeacherDahboardLayout from "./layouts/TeacherDahboardLayout";
 import { AuthProvider, useAuth } from "./context/AuthContext";
+import RealTasks from "./pages/RealTasks";
+import { TasksProvider } from "./context/TasksContext";
 
 function AppRoutes() {
   const {userRole} = useAuth(); 
@@ -30,6 +32,7 @@ function AppRoutes() {
             <Route path="games" element={<Games />}>
               <Route path="trash-sorting" element={<TrashSortingGame />} />
             </Route>
+            <Route path="realtasks" element={<RealTasks />} />
             <Route path="upcoming-events" element={<UpcomingEvents />} />
             <Route path="profile" element={<Profile />} />
           </Route>
@@ -54,9 +57,11 @@ function AppRoutes() {
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
+      <TasksProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </TasksProvider>
     </AuthProvider>
   );
 }

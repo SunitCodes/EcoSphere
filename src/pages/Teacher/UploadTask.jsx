@@ -1,8 +1,11 @@
 import React from 'react'
+import UploadForm from '../../components/UploadTask/UploadForm'
 
 const UploadTask = () => {
   return (
-    <div>UploadTask</div>
+    <div>
+      <UploadForm/>
+    </div>
   )
 }
 
