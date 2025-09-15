@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X, Menu, UserCircle2, Sprout, LeafyGreen } from "lucide-react";
+import { X, Menu, UserCircle2, Sprout, LeafyGreen, AlertTriangleIcon } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"; // ✅ import context
 
@@ -39,7 +39,12 @@ const Navbar = () => {
       {/* Right side */}
       <div className="flex items-center gap-4">
         {/* Toggle switch for Student / Teacher */}
+       
         <div className="flex items-center gap-2">
+          <div className="flex items-center text-sm text-yellow-600 pb-1">
+            <span><AlertTriangleIcon size={16}/></span>
+            <p>This button is for prototype purpose only</p>
+          </div>
           <span className="text-xs text-gray-600">
             {userRole === "student" ? "Student" : "Teacher"}
           </span>
