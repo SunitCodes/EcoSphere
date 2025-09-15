@@ -3,7 +3,7 @@ import { Crown, Award, Medal, TrendingUp, Repeat, Minus, LeafyGreen } from "luci
 const leaderboardData = [
   {
     rank: 1,
-    name: "Emma Thompson",
+    name: "Ananya Gupta",
     grade: "Grade 11",
     points: 2847,
     activity: "Completed Solar Energy Quiz",
@@ -12,7 +12,7 @@ const leaderboardData = [
   },
   {
     rank: 2,
-    name: "Marcus Chen",
+    name: "Shreyas Sharma",
     grade: "Grade 12",
     points: 2634,
     activity: "Tree Planting Challenge",
@@ -21,7 +21,7 @@ const leaderboardData = [
   },
   {
     rank: 3,
-    name: "Sofia Rodriguez",
+    name: "Ankit Ghosh",
     grade: "Grade 10",
     points: 2456,
     activity: "Water Conservation Task",
@@ -30,7 +30,7 @@ const leaderboardData = [
   },
   {
     rank: 4,
-    name: "James Wilson",
+    name: "Sneha Das",
     grade: "Grade 11",
     points: 2298,
     activity: "Renewable Energy Lesson",

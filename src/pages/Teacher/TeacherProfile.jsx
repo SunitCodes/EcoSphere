@@ -43,7 +43,7 @@ const TeacherProfile = () => {
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-md pt-2">
               <MapPin size={14} />
-              <span>San Francisco, CA</span>
+              <span>Liluah, West Bengal</span>
             </div>
           </div>
         </div>

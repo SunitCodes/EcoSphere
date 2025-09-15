@@ -68,7 +68,7 @@ const Navbar = () => {
           <div className="bg-green-50 px-3 py-1.5 rounded-full text-green-700 mr-2">
             <Link to="/games" className="flex gap-2">
               <LeafyGreen size={24} className="text-green-700" />
-              <span className="text-sm font-bold pt-0.5">267 Eco Points</span>
+              <span className="text-sm font-bold pt-0.5">50 Eco Points</span>
             </Link>
           </div>
         )}
@@ -81,7 +81,7 @@ const Navbar = () => {
         {/* User Info */}
         <div className="flex flex-col leading-tight">
           <span className="font-medium text-gray-900">
-            {userRole === "teacher" ? "Soumya Paul" : "Joseph John"}
+            {userRole === "teacher" ? "Soumya Paul" : "Aditya Kumar"}
           </span>
           <span className="text-xs text-gray-500 capitalize">{userRole}</span>
         </div>

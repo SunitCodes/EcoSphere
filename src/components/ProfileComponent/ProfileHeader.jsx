@@ -32,7 +32,7 @@ const ProfileHeader = () => {
           </div>
 
           <div>
-            <h1 className="text-4xl font-bold text-gray-900">Joseph John</h1>
+            <h1 className="text-4xl font-bold text-gray-900">Aditya Kumar</h1>
             <div className="flex items-center gap-2 text-gray-600 text-md pt-2">
               <GraduationCap size={14} />
               <span>Green Valley High School</span>
@@ -41,7 +41,7 @@ const ProfileHeader = () => {
             </div>
             <div className="flex items-center gap-2 text-gray-500 text-md pt-2">
               <MapPin size={14} />
-              <span>San Francisco, CA</span>
+              <span>Liluah, West Bengal</span>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ const ProfileHeader = () => {
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
             <Coins size={24} className="text-green-600" />
-            <span className="text-3xl font-semibold text-green-600">267</span>
+            <span className="text-3xl font-semibold text-green-600">50</span>
           </div>
           <p className="text-sm font-semibold text-gray-400 pt-2">Total Eco Points</p>
         </div>
@@ -84,7 +84,7 @@ const ProfileHeader = () => {
       <div className="mt-12 pt-4 border-t border-gray-200 flex flex-wrap justify-center md:justify-start gap-6 text-sm text-gray-600">
         <div className="flex items-center gap-2">
           <Calendar size={18} />
-          <span>Joined March 2024</span>
+          <span>Joined March 2025 </span>
         </div>
         <div className="flex items-center gap-2">
           <Flame size={18} className="text-orange-500" />
