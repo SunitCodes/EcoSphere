@@ -13,6 +13,7 @@ import {
   CheckCircle,
   Camera,
   Edit,
+  LeafyGreenIcon,
 } from "lucide-react";
 
 const ProfileHeader = () => {
@@ -57,7 +58,7 @@ const ProfileHeader = () => {
       <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-30">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-1">
-            <Coins size={24} className="text-green-600" />
+            <LeafyGreenIcon size={24} className="text-green-600" />
             <span className="text-3xl font-semibold text-green-600">50</span>
           </div>
           <p className="text-sm font-semibold text-gray-400 pt-2">Total Eco Points</p>
