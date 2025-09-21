@@ -1,0 +1,108 @@
+@font-face {
+  font-family: B04;
+  src: url("/assets/04B.ttf");
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+  box-sizing: border-box;
+}
+
+.game {
+  background-image: url("/assets/bg.png");
+  background-size: cover;
+  background-position: center;
+  width: 900px;
+  max-width: 95%;     /* responsive on small screens */
+  height: 500px;
+  font-family: B04, sans-serif;
+  color: #6c0056;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  overflow: hidden;   /* keep internal items inside */
+}
+
+.trashBins {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* wrap bins if screen is small */
+}
+
+h4 {
+  margin-left: 5%;
+}
+
+h3 {
+  text-align: center;
+}
+
+.trash {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;
+}
+
+.trash img {
+  padding: 4px;
+  max-width: 80px;
+}
+
+.gameOver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 40%;
+  text-align: center;
+  border-radius: 16px;
+
+  /* Frosted Glass Effect */
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent dark */
+  backdrop-filter: blur(6px);      /* blur background behind */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameOver h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.gameOver h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.gameOver p {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.gameOver p:hover {
+  background: #fff;
+  color: #333;
+}
